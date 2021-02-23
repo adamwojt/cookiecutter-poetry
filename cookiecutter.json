@@ -1,11 +1,11 @@
 {
-    "full_name": "Johan Vergeer",
-    "email": "johan@example.com",
-    "github_username": "johanvergeer",
-    "project_name": "Python Boilerplate",
+    "full_name": "Adam W.",
+    "email": "adam1edinburgh@gmail.com",
+    "github_username": "adamwojt",
+    "project_name": "Python Poetry Package",
     "project_slug": "{{ cookiecutter.project_name.lower().replace(' ', '-') }}",
     "module_name": "{{ cookiecutter.project_name.lower().replace(' ', '_').replace('-', '_') }}",
-    "project_short_description": "Python Boilerplate contains all the boilerplate you need to create a Python package.",
+    "project_short_description": "{{ cookiecutter.project_name }} written in python",
     "pypi_username": "{{ cookiecutter.github_username }}",
     "version": "0.1.0",
     "command_line_interface": [
@@ -14,7 +14,6 @@
         "argparse"
     ],
     "create_author_file": "y",
-    "create_docs": "y",
     "open_source_license": [
         "MIT license",
         "Apache Software License 2.0",

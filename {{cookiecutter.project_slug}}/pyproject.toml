@@ -38,20 +38,16 @@ classifiers = [
 [tool.poetry.urls]
 "Bug Tracker" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}/issues"
 "Source" = "https://github.com/{{ cookiecutter.github_username }}/{{ cookiecutter.project_slug }}"
-{% if cookiecutter.create_docs == "y" -%}"Documentation" = "https://{{ cookiecutter.project_slug }}.readthedocs.io"{% endif %}
 
 [tool.poetry.dependencies]
+{% raw %}
 python = "^3.6"
+{% endraw %}
+{%- if cookiecutter.command_line_interface|lower == 'click' -%}Click = "^7.0"{% endif %}
 
 [tool.poetry.dev-dependencies]
 pip = "^19.2.3"
 wheel = "^0.33.6"
-watchdog = "^0.9.0"
-flake8 = "^3.7.8"
-tox = "^3.14.0"
-coverage = "^4.5.4"
-{% if cookiecutter.create_docs == "y" -%}Sphinx = "^1.8.5"{% endif %}
-{%- if cookiecutter.command_line_interface|lower == 'click' -%}Click = "^7.0"{% endif %}
 pytest = "^4.6.5"
 pytest-runner = "^5.1"
 
@@ -63,3 +59,7 @@ build-backend = "poetry.masonry.api"
 [tool.poetry.plugins."console_scripts"]
 "{{ cookiecutter.module_name }}" = "{{ cookiecutter.module_name }}.cli:main"
 {%- endif %}
+
+[tool.dephell.main]
+from = {format = "poetry", path = "pyproject.toml"}
+to = {format = "setuppy", path = "setup.py"}

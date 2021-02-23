@@ -17,8 +17,6 @@ Features
 
 * Testing setup with ``pytest``
 * `Github Actions`_: Ready for GitHub actions
-* Sphinx_ docs: Documentation ready for generation with, for example, ReadTheDocs_
-* Auto-release to PyPI_ when you push a new tag to master (optional)
 * Command line interface using Click (optional)
 * GitHub Issue templates for bug reports and feature requests
 
@@ -38,13 +36,8 @@ Then:
 
 * Create a repo and put it there.
 * Create virtual environment and install project dependencies. (``poetry install``)
-* Run the Travis CLI command `travis encrypt --add deploy.password` to encrypt your PyPI password in Travis config
   and activate automated deployment on PyPI when you push a new tag to master branch.
-* Add the repo to your ReadTheDocs_ account + turn on the ReadTheDocs service hook.
-* Release your package by pushing a new tag to master.
 
-
-For more details, see the `cookiecutter-poetry tutorial`_.
 
 Fork This / Create Your Own
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~

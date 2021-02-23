@@ -7,8 +7,8 @@ import click
 {%- endif %}
 
 {% if cookiecutter.command_line_interface|lower == 'click' %}
-@click.command()
-def main(args=None):
+@click.group()
+def main():
     """Console script for {{cookiecutter.module_name}}."""
     click.echo(
         "Replace this message by putting your code into "
